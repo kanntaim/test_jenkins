@@ -3,8 +3,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'set'
+                retry(3) {
+                    bat 'set'
+                }
             }
+        }
+    }
+    post{
+        always{
+            echo 'This will always run'
         }
     }
 }
