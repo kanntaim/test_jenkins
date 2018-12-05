@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 retry(3) {
-                    python '-m pytest C:/Users/n.galeev/PycharmProjects/test_jenkins/pytest_rest_api/test/api_test.py'
+                    sh 'python -m pytest C:/Users/n.galeev/PycharmProjects/test_jenkins/pytest_rest_api/test/api_test.py'
                 }
             }
         }
