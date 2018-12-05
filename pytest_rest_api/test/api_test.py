@@ -3,7 +3,7 @@ import json
 import pytest
 import requests
 
-from pytest_rest_api.rest_api import RestApi
+from pytest_rest_api.api.rest_api import RestApi
 
 
 class TestApi:
