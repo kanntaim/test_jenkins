@@ -1,10 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
                 retry(3) {
-                    bat 'set'
+                    python 'C:\Users\n.galeev\PycharmProjects\test_jenkins\pytest_rest_api\api_test.py'
                 }
             }
         }
