@@ -3,9 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                retry(3) {
+                    echo 'hi'
                     python -m pytest C:\Users\n.galeev\PycharmProjects\test_jenkins\pytest_rest_api\test\api_test.py
-                }
             }
         }
     }
