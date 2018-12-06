@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 retry(3) {
-                    bat 'python -m pytest C:/Users/n.galeev/PycharmProjects/test_jenkins/pytest_rest_api/test/api_test.py --html=report.html'
+                    bat 'python -m authentication pytest C:/Users/n.galeev/PycharmProjects/test_jenkins/pytest_rest_api/test/api_test.py --html=report.html'
                 }
             }
         }

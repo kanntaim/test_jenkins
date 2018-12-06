@@ -23,6 +23,7 @@ class TestApi:
     def test_auth_params(self, request):
         return request.param
 
+    @pytest.mark.authentication
     def test_auth(self, test_auth_params):
         valid_account, actual_account, expected_status_code = test_auth_params
         response = self.requester.basic_auth(valid_account, actual_account)
